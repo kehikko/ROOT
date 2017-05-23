@@ -3,4 +3,4 @@
 	url = git@github.com:kehikko/kernel.git
 [submodule "modules/Core"]
 	path = modules/Core
-	url = git@github.com:kehikko/module-Core.git
+	url = git@github.com:kehikko/module.Core.git
