@@ -108,7 +108,8 @@ function html_exception($e, $code, $template)
 			ROUTE_KEY_CONTROLLER => 'Common',
 			ROUTE_KEY_ACTION     => 'error' . $code,
 		);
-		$controller = new Controller('common', $config, false, false);
+		$class      = CONTROLLER_CLASS_BASE;
+		$controller = new $class('common', $config, false, false);
 		$controller->display($template, array('code' => $code, 'msg' => $e->getMessage()));
 	}
 }

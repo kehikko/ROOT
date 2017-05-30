@@ -1,0 +1,15 @@
+common:
+  pattern: /common
+
+bootstrap:
+  pattern: /bootstrap
+
+auth:
+  pattern: /
+
+frontpage:
+  pattern: /
+
+admin:
+  pattern: /admin
+  access: role:admin

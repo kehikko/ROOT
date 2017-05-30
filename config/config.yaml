@@ -1,0 +1,21 @@
+setup:
+  debug: false
+
+# twig setup
+twig:
+  debug: false
+  cache: false
+
+# basic site js/css includes
+javascript:
+  - common:*
+  - bootstrap:*
+  - auth:*
+#  - admin:*
+  - site.js
+css:
+  - common:*
+  - bootstrap:*
+  - auth:*
+#  - admin:*
+  - site.css
