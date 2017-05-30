@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if authorize('role:kotivo') %}
+  <!-- kotivo system users -->
+  {{ render('kotivo:controllers') }}
+{% elseif authorize('role:admin') %}
+  <!-- administrators -->
+  {{ render('kotivo_admin:controllers') }}
+{% else %}
+  <!-- unauthorized users, should not come here, should be already forwarded to auth -->
+{% endif %}
+
+{% endblock content %}
+
