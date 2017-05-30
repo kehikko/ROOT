@@ -1,6 +1,0 @@
-[submodule "kernel"]
-	path = kernel
-	url = git@github.com:kehikko/kernel.git
-[submodule "modules/Core"]
-	path = modules/Core
-	url = git@github.com:kehikko/module.Core.git
