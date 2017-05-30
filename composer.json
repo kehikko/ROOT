@@ -1,0 +1,12 @@
+{
+  "repositories": [
+  {
+    "url": "https://github.com/kehikko/kernel.git",
+    "type": "git"
+  }],
+  "minimum-stability": "dev",
+  "require":
+  {
+    "kehikko/kernel": "master"
+  }
+}
