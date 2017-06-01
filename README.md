@@ -1,2 +1,2 @@
-# ROOT
-Framework base, starting point for new projects
+# Base
+Kehikko framework base, starting point for new projects.
