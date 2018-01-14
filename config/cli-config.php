@@ -9,7 +9,7 @@ require_once __DIR__ . '/../kernel/kernel.php';
 /* create kernel */
 $kernel = new kernel();
 $kernel->load();
-$em = $kernel->getEntityManager();
+$em = get_entity_manager($kernel);
 
 if (method_exists('Doctrine\ORM\Tools\Console\ConsoleRunner', 'createHelperSet'))
 {
