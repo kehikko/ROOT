@@ -17,6 +17,7 @@
     "pear/console_commandline": "^1.2",
     "kehikko/kernel": "1.*",
     "kehikko/core": "1.*",
-    "kehikko/route-common": "1.*"
+    "kehikko/route-common": "^1.1",
+    "kehikko/bin": "^1.1"
   }
 }
