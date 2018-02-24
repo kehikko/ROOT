@@ -5,4 +5,9 @@
 <p>
 {{ tr('msg/error/403') }}
 </p>
+
+{% if not username() %}
+{{ render('account:login-form') }}
+{% endif %}
+
 {% endblock content %}

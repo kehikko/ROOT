@@ -1,23 +1,22 @@
 {
-  "repositories": [
-  {
-    "url": "https://github.com/kehikko/kernel.git",
-    "type": "git"
-  },
-  {
-    "url": "https://github.com/kehikko/Core.git",
-    "type": "git"
-  }],
+  "name": "skeleton",
+  "type": "project",
+  "source": "https://github.com/kehikko/root.git",
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "config": {
+    "bin-dir": "./",
+    "component-dir": "web"
+  },
   "require":
   {
-    "kehikko/kernel": "master",
-    "kehikko/Core": "master",
     "twig/twig": "^2.0",
     "symfony/yaml": "^3.2",
     "phpFastCache/phpFastCache": "^4.3",
     "mtdowling/cron-expression": "^1.1",
-    "pear/console_commandline": "^1.2"
+    "pear/console_commandline": "^1.2",
+    "kehikko/kernel": "1.*",
+    "kehikko/core": "1.*",
+    "kehikko/route-common": "1.*"
   }
 }

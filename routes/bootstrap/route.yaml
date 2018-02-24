@@ -1,8 +1,0 @@
-block-editable:
-  controller: Bootstrap
-  action: blockEditable
-
-avatar:
-  pattern: '/bootstrap/{size|int}'
-  controller: Bootstrap
-  action: avatar

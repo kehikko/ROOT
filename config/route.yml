@@ -1,0 +1,5 @@
+common:
+  pattern: /common
+
+frontpage:
+  pattern: /

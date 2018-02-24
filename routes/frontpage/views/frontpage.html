@@ -1,16 +1,9 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
-{% if authorize('role:kotivo') %}
-  <!-- kotivo system users -->
-  {{ render('kotivo:controllers') }}
-{% elseif authorize('role:admin') %}
-  <!-- administrators -->
-  {{ render('kotivo_admin:controllers') }}
-{% else %}
-  <!-- unauthorized users, should not come here, should be already forwarded to auth -->
-{% endif %}
-
+<h1>
+  Kehikko
+</h1>
+<p>
+  Fresh installation of kehikko.
+</p>
 {% endblock content %}
-

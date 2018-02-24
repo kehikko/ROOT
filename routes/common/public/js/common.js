@@ -94,8 +94,7 @@ $(document).ready(function() {
 	$('body').on('click', '.ul-addable-input-submit', function(e) {
 		e.preventDefault();
 		var target = $(this).attr('target');
-		if (target !== undefined)
-		{
+		if (target !== undefined) {
 			ulAddableInputSubmit(target);
 		}
 	});
@@ -111,7 +110,6 @@ function dialogYesNo(object, options) {
 	if (options.event !== undefined) {
 		options.event.preventDefault();
 	}
-	
 	var defaults = {
 		title: "{{ tr('title/dialog-yes-no') }}",
 		message: "{{ tr('content/dialog-yes-no') }}",
@@ -138,19 +136,29 @@ function dialogYesNo(object, options) {
 					fn_pre = window[defaults.callbacks.pre];
 				}
 				if (typeof fn_pre == 'function') {
-					ret = fn_pre(this, options);
+					ret = fn_pre(object, options);
 				}
-
 				if (ret === false) {
 					/* do not let action continue */
-				} else if (defaults.remove) {
-					$(defaults.remove).remove();
-				} else if (defaults.url) {
-					window.location.assign(defaults.url);
 				} else {
-					/* continue with default click behaviour by triggering it again */
-					$(object).attr('dialog-yes-no-continue', 'yes');
-					$(object).trigger('click');
+					var fn_post = defaults.callbacks.post;
+					if (typeof fn_post != 'function') {
+						fn_post = window[defaults.callbacks.post];
+					}
+					if (typeof fn_post == 'function') {
+						if (fn_post(object, options) === false) {
+							return;
+						}
+					}
+					if (defaults.remove) {
+						$(defaults.remove).remove();
+					} else if (defaults.url) {
+						window.location.assign(defaults.url);
+					} else {
+						/* continue with default click behaviour by triggering it again */
+						$(object).attr('dialog-yes-no-continue', 'yes');
+						$(object).trigger('click');
+					}
 				}
 			}
 		}, {
@@ -346,8 +354,7 @@ function ulSearchableSearch(target, search) {
 	});
 }
 /* submit addable list item */
-function ulAddableInputSubmit(object)
-{
+function ulAddableInputSubmit(object) {
 	var value = $(object).val().trim().replace(/"/g, '&quot;');
 	if (value.length > 0) {
 		var parent = null;
