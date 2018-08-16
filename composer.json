@@ -1,7 +1,6 @@
 {
   "name": "skeleton",
   "type": "project",
-  "source": "https://github.com/kehikko/root.git",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
