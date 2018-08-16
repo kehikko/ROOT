@@ -8,6 +8,10 @@
     "bin-dir": "./",
     "component-dir": "web"
   },
+  "repositories": [{
+    "url": "https://github.com/kehikko/kernel.git",
+    "type": "git"
+  }],
   "require":
   {
     "twig/twig": "^2.0",
