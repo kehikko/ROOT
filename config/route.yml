@@ -1,10 +1,4 @@
 
-account:
-  pattern: /account
-
-admin:
-  pattern: /admin
-
 common:
   pattern: /common
 

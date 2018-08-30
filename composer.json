@@ -18,12 +18,8 @@
     "phpFastCache/phpFastCache": "^4.3",
     "mtdowling/cron-expression": "^1.1",
     "pear/console_commandline": "^1.2",
-    "kehikko/kernel": "dev-master",
+    "kehikko/kernel": "1.*",
     "kehikko/core": "1.*",
-    "kehikko/route-common": "^1.1",
-    "kehikko/bin": "^1.1",
-    "kehikko/route-account": "^1.0",
-    "kehikko/account": "^1.1",
-    "kehikko/route-admin": "^1.0"
+    "kehikko/route-common": "^1.1"
   }
 }
